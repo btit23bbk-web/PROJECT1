@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CET138 Portfolio – Full Stack Development</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {font-family: 'Segoe UI', sans-serif; background:#f7f9fc; color:#222;}
+    .navbar {box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    header.cover {background:#0d6efd; color:white; padding:100px 20px; text-align:center;}
+    header.cover h1 {font-size:2.8rem; font-weight:700;}
+    header.cover p {font-size:1.2rem;}
+    section {margin-top:60px;}
+    .section-card {background:white; border-radius:1rem; padding:2rem; box-shadow:0 6px 18px rgba(0,0,0,.1);}
+    pre {background:#111827; color:#e5e7eb; padding:1rem; border-radius:.5rem; overflow:auto;}
+    footer {background:#0d6efd; color:white; padding:20px; text-align:center; margin-top:50px;}
+    .fadein {animation:fadein 1s ease;}
+    @keyframes fadein {from{opacity:0; transform:translateY(15px);} to{opacity:1; transform:translateY(0);}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">CET138 Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#fullstack" class="nav-link">Full Stack</a></li>
+          <li class="nav-item"><a href="#html" class="nav-link">HTML</a></li>
+          <li class="nav-item"><a href="#css" class="nav-link">CSS</a></li>
+          <li class="nav-item"><a href="#bootstrap" class="nav-link">Bootstrap</a></li>
+          <li class="nav-item"><a href="#javascript" class="nav-link">JavaScript</a></li>
+          <li class="nav-item"><a href="#reflection" class="nav-link">Reflection</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- COVER PAGE -->
+  <header class="cover">
+    <h1>CET138 Full Stack Development Portfolio</h1>
+    <p><strong>Student Name:</strong> Bibek Bikram Chaudhary</p>
+    <p><strong>Module:</strong> CET138 – Full Stack Development</p>
+    <p><strong>Date:</strong> 2025</p>
+  </header>
+
+  <main class="container">
+
+    <!-- FULL STACK -->
+    <section id="fullstack" class="fadein">
+      <div class="section-card">
+        <h2>1) What is Full Stack Development?</h2>
+        <p>
+          Full Stack Development involves building both the <strong>front-end</strong> and <strong>back-end</strong> 
+          of a web application. A Full Stack Developer can design the interface, manage server logic, and 
+          interact with databases.
+        </p>
+        <ul>
+          <li><b>Front-End:</b> HTML, CSS, JavaScript for UI design.</li>
+          <li><b>Back-End:</b> Server-side code, authentication, and data management.</li>
+          <li><b>Integration:</b> Connecting client requests with database responses.</li>
+        </ul>
+        <pre>User → Browser → Request → Server → Database
+← Response ← Data ← Server</pre>
+      </div>
+    </section>
+
+    <!-- HTML -->
+    <section id="html" class="fadein">
+      <div class="section-card">
+        <h2>2) HTML</h2>
+        <p>
+          HTML (HyperText Markup Language) provides the structure of a web page. 
+          It defines headings, paragraphs, images, and links using semantic tags.
+        </p>
+        <h5>Example:</h5>
+        <pre>&lt;article&gt;
+  &lt;h3&gt;Classic T-Shirt&lt;/h3&gt;
+  &lt;p&gt;Price: $20&lt;/p&gt;
+&lt;/article&gt;</pre>
+        <p>This markup represents a product card with a heading and price.</p>
+      </div>
+    </section>
+
+    <!-- CSS -->
+    <section id="css" class="fadein">
+      <div class="section-card">
+        <h2>3) CSS</h2>
+        <p>
+          CSS (Cascading Style Sheets) styles HTML elements. 
+          It controls color, layout, and responsiveness for better user experience.
+        </p>
+        <h5>Example:</h5>
+        <pre>article {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+}</pre>
+        <p>This CSS snippet creates a visually appealing product card.</p>
+      </div>
+    </section>
+
+    <!-- BOOTSTRAP -->
+    <section id="bootstrap" class="fadein">
+      <div class="section-card">
+        <h2>4) Bootstrap Framework</h2>
+        <p>
+          Bootstrap is a front-end framework with pre-styled components and a responsive grid system. 
+          It speeds up development and ensures consistency across devices.
+        </p>
+        <h5>Example:</h5>
+        <pre>&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;img src="tshirt.jpg" class="card-img-top" alt="T-shirt"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Classic T-Shirt&lt;/h5&gt;
+    &lt;p class="card-text"&gt;$20&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Buy Now&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        <p>Bootstrap’s grid and components simplify responsive design.</p>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <section id="javascript" class="fadein">
+      <div class="section-card">
+        <h2>5) JavaScript</h2>
+        <p>
+          JavaScript makes websites <strong>interactive</strong>. It allows event handling, 
+          form validation, and dynamic updates without reloading the page.
+        </p>
+        <h5>Example (Cart Demo):</h5>
+        <button class="btn btn-success mb-2" onclick="addToCart('T-shirt')">Add T-shirt to Cart</button>
+        <p><b>Cart:</b> <span id="cartList">Empty</span></p>
+        <pre>&lt;button onclick="addToCart('T-shirt')"&gt;Add to Cart&lt;/button&gt;
+
+&lt;script&gt;
+let cart = [];
+function addToCart(item) {
+  cart.push(item);
+  document.getElementById("cartList").innerText = cart.join(", ");
+}
+&lt;/script&gt;</pre>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section id="reflection" class="fadein">
+      <div class="section-card">
+        <h2>Reflection & Conclusion</h2>
+        <p>
+          This portfolio demonstrates my understanding of Full Stack Development fundamentals. 
+          I showcased how <b>HTML</b> structures content, <b>CSS</b> improves design, 
+          <b>Bootstrap</b> accelerates development, and <b>JavaScript</b> adds interactivity. 
+          Together, these technologies form the basis of modern front-end web development.
+        </p>
+        <p>
+          Completing this task has improved my skills and prepared me to apply knowledge in real-world 
+          projects. It also highlights my readiness to progress into more advanced back-end frameworks, 
+          databases, and APIs—making me a competent future full stack developer.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 | CET138 Full Stack Development Portfolio | Student Name Here
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let cart = [];
+    function addToCart(item) {
+      cart.push(item);
+      document.getElementById("cartList").innerText = cart.join(", ");
+    }
+  </script>
+</body>
+</html>
